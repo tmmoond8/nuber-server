@@ -8,11 +8,13 @@
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
     "graphql-tools": "^4.0.4",
     "graphql-yoga": "^1.17.4",
     "helmet": "^3.16.0",
     "merge-graphql-schemas": "^1.5.8",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "typeorm": "^0.2.16"
   },
   "devDependencies": {
     "@types/node": "^11.13.0",
@@ -20,6 +22,7 @@
     "gql-merge": "^0.0.6",
     "graphql-to-typescript": "^0.1.2",
     "nodemon": "^1.18.10",
+    "pg": "^7.9.0",
     "ts-node": "^8.0.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.2"
