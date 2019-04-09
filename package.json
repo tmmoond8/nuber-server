@@ -7,6 +7,7 @@
   "author": "moonti <tmmoond8@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "class-validator": "^0.9.1",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "graphql-tools": "^4.0.4",
