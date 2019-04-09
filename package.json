@@ -7,6 +7,7 @@
   "author": "moonti <tmmoond8@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^3.0.5",
     "class-validator": "^0.9.1",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
@@ -18,6 +19,7 @@
     "typeorm": "^0.2.16"
   },
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/node": "^11.13.0",
     "babel-runtime": "^6.26.0",
     "gql-merge": "^0.0.6",
