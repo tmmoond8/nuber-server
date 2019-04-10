@@ -1,3 +1,14 @@
+type Place {
+  id: Int!
+  name: String!
+  lat: Float!
+  lng: Float!
+  address: String!
+  isFav: Boolean!
+  createAt: String!
+  updateAt: String
+}
+
 type User {
   id: Int!
   email: String
@@ -31,5 +42,5 @@ type Verification {
   key: String!
   used: Boolean!
   createAt: String!
-  updateAt: String!
+  updateAt: String
 }
