@@ -19,3 +19,17 @@ type User {
   lastLat: Float
   lastOrientation: Float
 }
+
+type Query {
+  user: User
+}
+
+type Verification {
+  id: Int!
+  target: String!
+  payload: String!
+  key: String!
+  used: Boolean!
+  createAt: String!
+  updateAt: String!
+}
