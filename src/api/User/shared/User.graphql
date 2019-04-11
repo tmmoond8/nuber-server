@@ -12,6 +12,8 @@ type User {
   createAt: String!
   updateAt: String
   fullName: String
+  chat: Chat
+  messages: [Message]
   isDriving: Boolean!
   isRiding: Boolean!
   isTaken: Boolean!
