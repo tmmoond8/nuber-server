@@ -7,7 +7,6 @@ import {
   BeforeUpdate,
   Column, 
   CreateDateColumn,
-  Entity, 
   ManyToOne,
   OneToMany, 
   PrimaryGeneratedColumn,
@@ -20,7 +19,6 @@ import Ride from './Ride';
 
 const BCRYPT_ROUNDS = 10;
 
-@Entity()
 class User extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
