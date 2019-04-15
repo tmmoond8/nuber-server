@@ -2,11 +2,12 @@ import {
   BaseEntity,
   Column,
   CreateDateColumn,
+  Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
  } from 'typeorm'
 
-
+@Entity()
 class Place extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 

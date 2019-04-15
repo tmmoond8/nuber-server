@@ -2,6 +2,7 @@ import {
   BaseEntity,
   Column,
   CreateDateColumn,
+  Entity,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn
@@ -9,7 +10,7 @@ import {
 import { rideStatus } from 'src/types/types';
 import User from './User';
 
-
+@Entity()
 class Ride extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
   

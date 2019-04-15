@@ -2,6 +2,7 @@ import {
   BaseEntity,
   Column,
   CreateDateColumn,
+  Entity,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -9,6 +10,7 @@ import {
 import Chat from './Chat';
 import User from './User';
 
+@Entity()
 class Message extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 

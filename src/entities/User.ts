@@ -7,6 +7,7 @@ import {
   BeforeUpdate,
   Column, 
   CreateDateColumn,
+  Entity,
   ManyToOne,
   OneToMany, 
   PrimaryGeneratedColumn,
@@ -19,12 +20,13 @@ import Ride from './Ride';
 
 const BCRYPT_ROUNDS = 10;
 
+@Entity()
 class User extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
-  @Column({ type: "text", unique: true})
+  @Column({ type: "text", nullable: true})
   @IsEmail()
-  email: String;
+  email: String | null;
 
   @Column({ type: "boolean", default: false})
   verifiedEmail: boolean;
@@ -33,15 +35,15 @@ class User extends BaseEntity {
   firstName: string;
 
   @Column({ type: "text"})
-  lasttName: string;
+  lastName: string;
 
   @Column({ type: "int", nullable: true})
   age: number;
   
-  @Column({ type: "text"})
+  @Column({ type: "text", nullable: true})
   password: string;
 
-  @Column({ type: "text"})
+  @Column({ type: "text", nullable: true})
   phoneNumber: string;
 
   @Column({ type: "boolean", default: false})
@@ -91,7 +93,7 @@ class User extends BaseEntity {
   }
 
   get fullName() : string {
-    return `${this.firstName} ${this.lasttName}`
+    return `${this.firstName} ${this.lastName}`
   }
 
   @CreateDateColumn() createAt: string;

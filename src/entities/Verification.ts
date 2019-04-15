@@ -3,6 +3,7 @@ import {
   BeforeInsert,
   Column,
   CreateDateColumn,
+  Entity,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -13,6 +14,7 @@ import User from './User';
 const PHONE = "PHONE";
 const EMAIL = "EMAIL";
 
+@Entity()
 class Verification extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 

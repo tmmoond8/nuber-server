@@ -5,9 +5,3 @@ export interface Resolvers {
     [key: string]: Resolver;
   }
 }
-
-// const resolvers: Resolvers = {
-//   Query: {
-//     sayHello: () => ""
-//   }
-// }
