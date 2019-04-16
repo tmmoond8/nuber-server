@@ -16,11 +16,13 @@
     "helmet": "^3.16.0",
     "merge-graphql-schemas": "^1.5.8",
     "morgan": "^1.9.1",
+    "twilio": "^3.30.1",
     "typeorm": "^0.2.16"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/node": "^11.13.0",
+    "@types/twilio": "^0.0.10",
     "babel-runtime": "^6.26.0",
     "gql-merge": "^0.0.6",
     "graphql-to-typescript": "^0.1.2",

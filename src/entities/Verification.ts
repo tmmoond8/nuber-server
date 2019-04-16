@@ -30,9 +30,6 @@ class Verification extends BaseEntity {
   @Column({ type: "boolean"})
   used: boolean;
 
-  @ManyToOne(type => User, user => user.verifications)
-  user: User;
-
   @CreateDateColumn() createAt: string;
   @UpdateDateColumn() updateAt: string;
 
