@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import logger from 'morgan';
 import schema from './schema';
+import decodeJWT from './utils/decodeJWT';
 
 class App {
   public app: GraphQLServer;
@@ -18,13 +19,16 @@ class App {
     this.app.express.use(cors());
     this.app.express.use(logger('dev'));
     this.app.express.use(helmet());
+    this.app.express.use(this.jwt);
   };
 
   private jwt = async (req, res, next) : Promise<void> => {
     const token = req.get("X-JWT");
     if(token) {
-      // 토큰에서 사용자의 아이디를 꺼냄
+      const user = await decodeJWT(token);
+      console.log(user);
     }
+    next();
   }
 }
 
