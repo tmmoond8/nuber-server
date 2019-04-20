@@ -19,6 +19,13 @@ class App {
     this.app.express.use(logger('dev'));
     this.app.express.use(helmet());
   };
+
+  private jwt = async (req, res, next) : Promise<void> => {
+    const token = req.get("X-JWT");
+    if(token) {
+      // 토큰에서 사용자의 아이디를 꺼냄
+    }
+  }
 }
 
 export default new App().app;
