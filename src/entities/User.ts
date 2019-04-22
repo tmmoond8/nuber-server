@@ -25,7 +25,7 @@ class User extends BaseEntity {
 
   @Column({ type: "text", nullable: true})
   @IsEmail()
-  email: String | null;
+  email: string | null;
 
   @Column({ type: "boolean", default: false})
   verifiedEmail: boolean;
