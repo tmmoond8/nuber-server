@@ -64,13 +64,13 @@ class User extends BaseEntity {
   ridesAsDriver: Ride[];
 
   @Column({ type: "boolean", default: false})
-  isDriving: string;
+  isDriving: boolean;
 
   @Column({ type: "boolean", default: false})
-  isRiding: string;
+  isRiding: boolean;
 
   @Column({ type: "boolean", default: false})
-  isTaken: string;
+  isTaken: boolean;
 
   @Column({ type: "double precision", default:0})
   lastLng: number;
