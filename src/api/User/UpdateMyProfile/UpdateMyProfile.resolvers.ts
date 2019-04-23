@@ -12,6 +12,13 @@ const resolvers: Resolvers = {
             notNull[key] = args[key];
           }
         });
+        
+        if(notNull.hasOwnProperty('password')) {
+          user.password = notNull['password'];
+          user.save();
+          delete notNull['password'];
+        }
+
         try {
           await User.update({ id: user.id }, { ...notNull });
           return {
