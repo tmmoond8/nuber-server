@@ -1,7 +1,7 @@
 import { Resolvers } from "src/types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
 import User from "../../../entities/User";
 import Verification from "../../../entities/Verification";
+import privateResolver from "../../../utils/privateResolver";
 import { sendVerificationEmail } from "../../../utils/sendEmail";
 
 const resolvers: Resolvers = {

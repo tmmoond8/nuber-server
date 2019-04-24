@@ -15,13 +15,17 @@ import {
 } from 'typeorm';
 import Chat from './Chat';
 import Message from './Message';
-import Ride from './Ride';
 import Place from './Place';
+import Ride from './Ride';
 
 const BCRYPT_ROUNDS = 10;
 
 @Entity()
 class User extends BaseEntity {
+
+  get fullName() : string {
+    return `${this.firstName} ${this.lastName}`
+  }
   @PrimaryGeneratedColumn() id: number;
 
   @Column({ type: "text", nullable: true})
@@ -88,20 +92,12 @@ class User extends BaseEntity {
   @Column({ type: "text", nullable: true})
   fbId: string;
 
-  public comparePassword(password: string): Promise<boolean> {
-    return bcrypt.compare(password, this.password);
-  }
-
-  get fullName() : string {
-    return `${this.firstName} ${this.lastName}`
-  }
-
   @CreateDateColumn() createAt: string;
 
   @UpdateDateColumn() updateAt: string;
 
-  private hashPassword(password: string): Promise<string> {
-    return bcrypt.hash(password, BCRYPT_ROUNDS);
+  public comparePassword(password: string): Promise<boolean> {
+    return bcrypt.compare(password, this.password);
   }
 
   @BeforeInsert()
@@ -111,6 +107,10 @@ class User extends BaseEntity {
         const hashedPassword = await this.hashPassword(this.password);
         this.password = hashedPassword;
     }
+  }
+
+  private hashPassword(password: string): Promise<string> {
+    return bcrypt.hash(password, BCRYPT_ROUNDS);
   }
 }
 

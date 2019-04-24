@@ -1,9 +1,9 @@
-import { Resolvers } from "src/types/resolvers";
 import { EditPlaceMutationArgs, EditPlaceResponse } from "src/types/graph";
-import privateResolver from "../../../utils/privateResolver";
-import cleanNullArgs from "../../../utils/cleanNullArgs";
+import { Resolvers } from "src/types/resolvers";
 import Place from "../../../entities/Place";
 import User from "../../../entities/User";
+import cleanNullArgs from "../../../utils/cleanNullArgs";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {

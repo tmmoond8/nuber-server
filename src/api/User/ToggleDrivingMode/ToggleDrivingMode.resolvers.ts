@@ -1,6 +1,6 @@
 import { Resolvers } from "src/types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
 import User from "../../../entities/User";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {

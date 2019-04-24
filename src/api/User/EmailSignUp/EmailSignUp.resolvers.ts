@@ -1,9 +1,9 @@
-import { Resolvers } from "src/types/resolvers";
 import { EmailSignUpMutationArgs, EmailSignUpResponse } from "src/types/graph";
-import createJWT from "../../../utils/createJWT";
-import { sendVerificationEmail } from "../../../utils/sendEmail";
+import { Resolvers } from "src/types/resolvers";
 import User from "../../../entities/User";
 import Verification from "../../../entities/Verification";
+import createJWT from "../../../utils/createJWT";
+import { sendVerificationEmail } from "../../../utils/sendEmail";
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -43,7 +43,7 @@ const resolvers: Resolvers = {
             return {
               ok: true,
               error: null,
-              token: token
+              token
             };
           } else {
             return {

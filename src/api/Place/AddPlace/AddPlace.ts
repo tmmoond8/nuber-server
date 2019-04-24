@@ -1,8 +1,8 @@
+import { AddPlaceResponse, AddPlaceResponseMutationArgs } from "src/types/graph";
 import { Resolvers } from "src/types/resolvers";
-import { AddPlaceResponseMutationArgs, AddPlaceResponse } from "src/types/graph";
-import privateResolver from "../../../utils/privateResolver";
 import Place from "../../../entities/Place";
 import User from "../../../entities/User";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {
