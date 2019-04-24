@@ -4,7 +4,7 @@ type AddPlaceResponse {
 }
 
 type Mutation {
-  AddPlaceResponse(
+  AddPlace(
     name: String!
     lat: Float!
     lng: Float!

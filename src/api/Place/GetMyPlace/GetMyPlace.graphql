@@ -1,0 +1,9 @@
+type GetMyPlaceResponse {
+  ok: Boolean!
+  error: String
+  places: [Place]
+}
+
+type Query {
+  GetMyPlace: GetMyPlaceResponse!
+}

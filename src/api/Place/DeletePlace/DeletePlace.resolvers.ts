@@ -1,25 +1,22 @@
-import { EditPlaceMutationArgs, EditPlaceResponse } from "src/types/graph";
+import { DeletePlaceMutationArgs, DeletePlaceResponse } from "src/types/graph";
 import { Resolvers } from "src/types/resolvers";
 import Place from "../../../entities/Place";
 import User from "../../../entities/User";
-import cleanNullArgs from "../../../utils/cleanNullArgs";
 import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {
-    EditPlace: privateResolver(async (
+    DeletePlace: privateResolver(async (
       _, 
-      args : EditPlaceMutationArgs, 
+      args: DeletePlaceMutationArgs, 
       { req }
-    ) : Promise<EditPlaceResponse> => {
+    ): Promise<DeletePlaceResponse> => {
       const user: User = req.user;
       try {
-        const place = await Place.findOne({id: args.placeId});
+        const place = await Place.findOne({ id: args.placeId });
         if(place) {
           if(place.userId === user.id) {
-            const notNull: any = cleanNullArgs(args);
-            delete notNull.placeId;
-            await Place.update({ id: place.id }, { ...notNull });
+            place.remove();
             return {
               ok: true,
               error: null
@@ -36,7 +33,7 @@ const resolvers: Resolvers = {
             error: 'Place not found'
           }
         }
-      } catch (error) {
+      } catch(error) {
         return {
           ok: false,
           error: error.message
