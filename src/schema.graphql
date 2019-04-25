@@ -21,7 +21,7 @@ type AddPlaceResponse {
 }
 
 type Mutation {
-  AddPlaceResponse(name: String!, lat: Float!, lng: Float!, address: String!, isFav: Boolean!): AddPlaceResponse!
+  AddPlace(name: String!, lat: Float!, lng: Float!, address: String!, isFav: Boolean!): AddPlaceResponse!
   DeletePlace(placeId: Int!): DeletePlaceResponse!
   EditPlace(placeId: Int!, name: String, isFav: Boolean): EditPlaceResponse!
   CompleteEmailVerification(key: String!): CompleteEmailVerificationResponse!
@@ -55,6 +55,7 @@ type GetMyPlaceResponse {
 type Query {
   GetMyPlace: GetMyPlaceResponse!
   GetMyProfile: GetMyProfileResponse!
+  GetNearbyDrivers: GetNearbyDriversResponse!
   user: User
 }
 
@@ -122,6 +123,12 @@ type GetMyProfileResponse {
   ok: Boolean!
   error: String
   user: User
+}
+
+type GetNearbyDriversResponse {
+  ok: Boolean!
+  error: String
+  drivers: [User]
 }
 
 type ReportMovementResponse {

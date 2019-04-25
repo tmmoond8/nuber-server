@@ -1,4 +1,4 @@
-import { AddPlaceResponse, AddPlaceResponseMutationArgs } from "src/types/graph";
+import { AddPlaceResponse, AddPlaceMutationArgs } from "src/types/graph";
 import { Resolvers } from "src/types/resolvers";
 import Place from "../../../entities/Place";
 import User from "../../../entities/User";
@@ -8,7 +8,7 @@ const resolvers: Resolvers = {
   Mutation: {
     AddPlace: privateResolver(async (
       _, 
-      args: AddPlaceResponseMutationArgs, 
+      args: AddPlaceMutationArgs, 
       { req }
     ) : Promise<AddPlaceResponse> => {
       const user: User = req.user;
