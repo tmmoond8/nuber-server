@@ -1,7 +1,7 @@
 import { Resolvers } from "src/types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
-import User from "../../../entities/User";
 import { Between, getRepository } from "typeorm";
+import User from "../../../entities/User";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Query: {

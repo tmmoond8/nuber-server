@@ -1,4 +1,4 @@
-import { AddPlaceResponse, AddPlaceMutationArgs } from "src/types/graph";
+import { AddPlaceMutationArgs, AddPlaceResponse } from "src/types/graph";
 import { Resolvers } from "src/types/resolvers";
 import Place from "../../../entities/Place";
 import User from "../../../entities/User";
