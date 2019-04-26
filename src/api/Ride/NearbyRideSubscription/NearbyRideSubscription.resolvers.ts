@@ -3,7 +3,7 @@ import User from "../../../entities/User";
 import { abs } from '../../../utils/math';
 
 const resolvers = {
-  SubScription: {
+  Subscription: {
     NearbyRideSubscription: {
       subscribe: withFilter(
         (_, __, { pubSub }) => pubSub.asyncIterator('rideRequest'),
