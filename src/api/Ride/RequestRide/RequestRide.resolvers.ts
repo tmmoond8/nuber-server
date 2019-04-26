@@ -5,7 +5,7 @@ import User from "../../../entities/User";
 import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
-  Muation: {
+  Mutation: {
     RequestRide: privateResolver(async (
       _, 
       args: RequestRideMutationArgs, 
