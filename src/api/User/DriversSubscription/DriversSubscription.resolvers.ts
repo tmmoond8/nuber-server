@@ -1,6 +1,5 @@
 import { withFilter } from 'graphql-yoga';
 import User from '../../../entities/User';
-import { abs } from '../../../utils/math';
 
 const resolvers = {
   Subscription: {
@@ -17,8 +16,8 @@ const resolvers = {
           } = payload;
           const { lastLat: userLastLat, lastLng: userLastLng } = user;
           return (
-            abs(driverLastLat - userLastLat) <= 0.05 &&
-            abs(driverLastLng - userLastLng) <= 0.05
+            Math.abs(driverLastLat - userLastLat) <= 0.05 &&
+            Math.abs(driverLastLng - userLastLng) <= 0.05
           );
         }
       )
