@@ -1,0 +1,3 @@
+interface Subscription {
+  RideStatusSubscription: Ride
+}
