@@ -1,6 +1,6 @@
-import Ride from "src/entities/Ride";
 import { UpdateRideStatusMutationArgs, UpdateRideStatusResponse } from "src/types/graph";
 import { Resolvers } from "src/types/resolvers";
+import Ride from "../../../entities/Ride";
 import User from "../../../entities/User";
 import privateResolver from "../../../utils/privateResolver";
 
