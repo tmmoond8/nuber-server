@@ -1,7 +1,10 @@
 type Chat {
   id: Int!
   messages: [Message]!
-  participants: [User]!
+  passenger: User!
+  passengerId: Int
+  driver: User!
+  driverId: Int
   createAt: String!
   updateAt: String
 }
@@ -198,7 +201,8 @@ type User {
   createAt: String!
   updateAt: String
   fullName: String
-  chat: Chat
+  chatsAsPassenger: [Chat]
+  chatsAsDriver: [Chat]
   messages: [Message]
   ridesAsPassenger: [Ride]
   ridesAsDriver: [Ride]
