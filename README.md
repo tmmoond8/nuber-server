@@ -40,7 +40,7 @@ Server for the (N)UBER Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 - [X] Create a Chat Room
 - [X] Get Chat Room Messages
 - [ ] Subscribe to Chat Room Messages
-- [ ] Send a Chat Message
+- [X] Send a Chat Message
 
 ## Code Chaalange
 
