@@ -10,7 +10,7 @@ const resolvers: Resolvers = {
     SendChatMessage: privateResolver(async (
       _, 
       args: SendChatMessageMutationArgs, 
-      { req }
+      { req, pubSub }
     ) : Promise<SendChatMessageResponse> => {
       const user: User = req.user;
       try {
@@ -22,6 +22,7 @@ const resolvers: Resolvers = {
               user,
               chat
             }).save();
+            pubSub.publish("newChatMessage", { MessageSubscription: message })
             return {
               ok: true,
               error: null,
