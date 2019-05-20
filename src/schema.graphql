@@ -6,7 +6,7 @@ type GetChatResponse {
 
 type Query {
   GetChat(chatId: Int!): GetChatResponse!
-  GetMyPlace: GetMyPlaceResponse!
+  GetMyPlaces: GetMyPlacesResponse!
   GetNearbyRide: GetNearbyRideResponse!
   GetRide(rideId: Int!): GetRideResponse!
   GetMyProfile: GetMyProfileResponse!
@@ -84,7 +84,7 @@ type EditPlaceResponse {
   error: String
 }
 
-type GetMyPlaceResponse {
+type GetMyPlacesResponse {
   ok: Boolean!
   error: String
   places: [Place]
