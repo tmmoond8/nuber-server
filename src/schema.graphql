@@ -131,9 +131,9 @@ type Ride {
   dropOffLat: Float!
   dropOffLng: Float!
   price: Float!
-  driver: User!
+  driver: User
   driverId: Int
-  passenger: User!
+  passenger: User
   passengerId: Int
   chat: Chat
   chatId: Int
