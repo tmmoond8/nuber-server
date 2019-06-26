@@ -34,6 +34,7 @@ const resolvers: Resolvers = {
                     passenger: ride.passenger
                   }).save();
                   ride.chat = chat;
+                  ride.chatId = chat.id;
                   ride.save();
                 }
               } else {
@@ -49,6 +50,10 @@ const resolvers: Resolvers = {
                 ride.status = args.status
                 ride.save();
                 pubSub.publish("rideUpdate", { RideStatusSubscription: ride });
+                if (args.status === "FINISHED") {
+                  await User.update({ id: ride.driverId }, { isTaken: false });
+                  await User.update({ id: ride.passengerId }, { isRiding: false });
+                }
                 return {
                   ok: true,
                   error: null,

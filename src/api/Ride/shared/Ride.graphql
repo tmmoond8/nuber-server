@@ -10,7 +10,7 @@ type Ride {
   price: Float!
   driver: User
   driverId: Int
-  passenger: User
+  passenger: User!
   passengerId: Int
   chat: Chat
   chatId: Int
