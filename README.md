@@ -32,37 +32,9 @@ These instructions will get you a copy of the project up and running on your loc
 - yarn
 - PostgreSQL
 
-### Installaction
+## Run on your machine
 
-#### 1. Clone the project
-```
-$ git clone https://github.com/tmmoond8/nuber-server.git
-```
-#### 2. Install packages from npm
-```
-$ cd nuber-server
-$ yarn
-```
-#### 3. Rename nuber-server/src/.env.sample to nuber-server/src/.env
-```
-DB_ENDPOINT=localhost
-DB_USERNAME=tamm
-DB_PASSWORD=
-DB_NAME=number_db
-TWILIO_SID={TWILIO_SID}
-TWILIO_PHONE={TWILIO_PHONE}
-TWILIO_TOKEN={TWILIO_TOKEN}
-JWT_TOKEN={TWILIO_TOKEN}
-MAILGUN_API_KEY={TWILIO_TOKEN}
-```
-
-- [TWILIO](https://www.twilio.com) was used for SMS
-- [JWT](https://jwt.io/) was used for jwt authentication
-- [MAILGUN](https://www.mailgun.com/) was used for Email
-
-#### 4. Create Database and User
-```
-```
+If you want to run nuber on your machine, please check [Guidelines document](GUIDELINES.md).
 
 
 ### Public Resolvers:
