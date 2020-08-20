@@ -7,7 +7,7 @@
   "author": "moonti <tmmoond8@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^3.0.5",
+    "bcrypt": "^5.0.0",
     "class-validator": "^0.9.1",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
